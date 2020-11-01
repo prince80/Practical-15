@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+    <style>
+       .inc
+        {
+            display: inline;
+            font-size: larger;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            background-color: yellow;
+
+        }
+        .dec
+        {
+            display: inline;
+            font-size: larger;
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            font-size: 30px;
+            margin-left: 15cm;
+            
+            
+
+        }
+        
+        h1
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 50px;
+        }
+        body
+        {
+                background-color: gray;
+        }
+        h6{
+            display: inline;
+            margin-left: 50px;
+            margin-right: 50px;
+            color:yellow ;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body style="background-color: grey;">
+    <h1>Counter</h1>
+    <button id="dec">-</button>
+    <h6 id="a">0</h6>
+    <button id="inc">+</button>
+    <script>
+        var x=document.getElementById("dec");
+        var y=document.getElementById("inc");
+        var c=0;    
+        x.style.width='50px';
+        x.style.height='50px';
+        x.style.backgroundColor='yellow';
+        x.style.marginLeft='45%';
+        
+
+        y.style.width='50px';
+        y.style.height='50px';
+        y.style.backgroundColor='yellow';
+        y.style.marginRight='1%';
+        if(c==0)
+        {
+            y.onclick=inc; 
+           
+        }
+    function inc()
+        {
+          c=c+1;
+          document.getElementById("a").innerHTML=c;
+           if(c==0)
+        {
+
+        y.onclick=inc;
+        
+    }
+    else{
+        y.onclick=inc;
+        x.onclick=dec;
+    }
+        }
+        function dec()
+        {
+            c=c-1;
+            document.getElementById("a").innerHTML=c;
+            if(c==0)
+        {
+            y.onclick=inc; 
+           
+        }
+        else
+        {
+
+        y.onclick=inc;
+        x.onclick=dec;
+    }
+          
+        }
+       
+    </script>
+</body>
+</html>
